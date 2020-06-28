@@ -11,3 +11,13 @@
     </start-mini-button-group>
   </div>
 </template>
+<script>
+import startMiniButton from '../../../../src/packages/button/button.vue';
+import startMiniButtonGroup from '../../../../src/packages/button/button-group.vue'
+export default {
+  components: {
+    startMiniButton,
+    startMiniButtonGroup
+  }
+};
+</script>

@@ -11,6 +11,12 @@
 </template>
 
 <script>
+import startMiniButton from '../../../../src/packages/button/button.vue'
+export default {
+  components:{
+    startMiniButton
+  }
+}
 </script>
 
 <style>

@@ -27,6 +27,8 @@ export default {
 .start-mini-button-group {
   display: inline-flex;
   vertical-align: middle;
+  padding: 24px;
+  box-sizing: border-box;
   button {
     position:relative;
     border-radius: 0;

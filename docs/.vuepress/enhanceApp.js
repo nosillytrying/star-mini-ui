@@ -8,13 +8,10 @@ Vue.directive('highlight',function (el) {
     hljs.highlightBlock(block)
   })
 })
-import startMiniUi from '../../dist/star-mini-ui.umd';
-import '../../dist/star-mini-ui.css';
 export default ({
   Vue,
   options, 
   router,
   siteData
 }) => {
-  Vue.use(startMiniUi)
 }

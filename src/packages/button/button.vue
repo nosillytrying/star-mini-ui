@@ -13,8 +13,12 @@
 </template>
 
 <script>
+import startMiniIcon from '../icon'
 export default {
   name: 'start-mini-button',
+  components: {
+    startMiniIcon
+  },
   props: {
     type: {
       type: String,
