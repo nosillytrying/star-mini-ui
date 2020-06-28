@@ -1,0 +1,39 @@
+{
+  "name": "start-mini-ui",
+  "version": "0.5.0",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test": "karma start",
+    "lib": "vue-cli-service build --target lib --name star-mini-ui ./src/packages/index.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "highlight.js": "^10.1.1",
+    "vue": "^2.6.11"
+  },
+  "main": "./dist/hs-ui.umd.min.js",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-unit-mocha": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/test-utils": "^1.0.3",
+    "chai": "^4.1.2",
+    "karma": "^5.1.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.32",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^8.0.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.5.2"
+  }
+}
