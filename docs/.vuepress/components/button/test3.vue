@@ -1,13 +1,13 @@
 <template>
   <div>
-    <start-mini-button :loading="true">加载中</start-mini-button>
+    <star-mini-button :loading="true">加载中</star-mini-button>
   </div>
 </template>
 <script>
-import startMiniButton from '../../../../src/packages/button/button.vue';
+import starMiniButton from '../../../../src/packages/button/button.vue';
 export default {
   components: {
-    startMiniButton
+    starMiniButton
   }
 };
 </script>

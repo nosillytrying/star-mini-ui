@@ -1,23 +1,23 @@
 <template>
   <div>
-    <start-mini-button-group>
-      <start-mini-button type='primary' icon="left" position="left">上一页</start-mini-button>
-      <start-mini-button type='primary' icon="right" position="right">下一页</start-mini-button>
-    </start-mini-button-group>
-    <start-mini-button-group>
-      <start-mini-button icon="edit" type='primary'></start-mini-button>
-      <start-mini-button icon="sousuo" type='primary'></start-mini-button>
-      <start-mini-button icon="xiazai" type='primary'></start-mini-button>
-    </start-mini-button-group>
+    <star-mini-button-group>
+      <star-mini-button type='primary' icon="left" icon-position="left">上一页</star-mini-button>
+      <star-mini-button type='primary' icon="right" icon-position="right">下一页</star-mini-button>
+    </star-mini-button-group>
+    <star-mini-button-group>
+      <star-mini-button icon="edit" type='primary'></star-mini-button>
+      <star-mini-button icon="sousuo" type='primary'></star-mini-button>
+      <star-mini-button icon="xiazai" type='primary'></star-mini-button>
+    </star-mini-button-group>
   </div>
 </template>
 <script>
-import startMiniButton from '../../../../src/packages/button/button.vue';
-import startMiniButtonGroup from '../../../../src/packages/button/button-group.vue'
+import starMiniButton from '../../../../src/packages/button/button.vue';
+import starMiniButtonGroup from '../../../../src/packages/button/button-group.vue'
 export default {
   components: {
-    startMiniButton,
-    startMiniButtonGroup
+    starMiniButton,
+    starMiniButtonGroup
   }
 };
 </script>

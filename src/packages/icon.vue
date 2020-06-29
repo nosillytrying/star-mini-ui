@@ -19,7 +19,7 @@ export default {
 
 <style>
 .star-mini-icon {
-    width: 25px; height: 25px;
+    width: 25px ; height: 25px ;
     vertical-align: middle;
     fill: currentColor;
     overflow: hidden;

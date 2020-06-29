@@ -1,14 +1,14 @@
 <template>
   <div>
-    <start-mini-button icon="edit">编辑</start-mini-button>
-    <start-mini-button icon="edit"></start-mini-button>
+    <star-mini-button icon="edit">编辑</star-mini-button>
+    <star-mini-button icon="edit"></star-mini-button>
   </div>
 </template>
 <script>
-import startMiniButton from '../../../../src/packages/button/button.vue';
+import starMiniButton from '../../../../src/packages/button/button.vue';
 export default {
   components: {
-    startMiniButton
+    starMiniButton
   }
 };
 </script>

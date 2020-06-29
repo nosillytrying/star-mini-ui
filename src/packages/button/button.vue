@@ -13,11 +13,11 @@
 </template>
 
 <script>
-import startMiniIcon from '../icon'
+import starMiniIcon from '../icon'
 export default {
   name: 'star-mini-button',
   components: {
-    startMiniIcon
+    starMiniIcon
   },
   props: {
     type: {

@@ -17,12 +17,12 @@
 
 ```html
 <div>
-  <start-mini-button>默认按钮</start-mini-button>
-  <start-mini-button type="primary">主要按钮</start-mini-button>
-  <start-mini-button type="success">成功按钮</start-mini-button>
-  <start-mini-button type="info">信息按钮</start-mini-button>
-  <start-mini-button type="warning">警告按钮</start-mini-button>
-  <start-mini-button type="danger">危险按钮</start-mini-button>
+  <star-mini-button>默认按钮</star-mini-button>
+  <star-mini-button type="primary">主要按钮</star-mini-button>
+  <star-mini-button type="success">成功按钮</star-mini-button>
+  <star-mini-button type="info">信息按钮</star-mini-button>
+  <star-mini-button type="warning">警告按钮</star-mini-button>
+  <star-mini-button type="danger">危险按钮</star-mini-button>
 </div>
 ```
 
@@ -44,8 +44,8 @@
 
 ```html
 <div>
-  <start-mini-button icon="edit">编辑</start-mini-button>
-  <start-mini-button icon="edit"></start-mini-button>
+  <star-mini-button icon="edit">编辑</star-mini-button>
+  <star-mini-button icon="edit"></star-mini-button>
 </div>
 ```
 
@@ -66,7 +66,7 @@
 ::: slot highlight
 
 ```html
-<start-mini-button :loading="true">加载中</start-mini-button>
+<star-mini-button :loading="true">加载中</star-mini-button>
 ```
 
 :::
@@ -81,23 +81,21 @@
 <button-test4></button-test4>
 :::
 
-使用`<el-button-group>`标签来嵌套你的按钮。
+使用`<star-mini-button-group>`标签来嵌套你的按钮。
 
 ::: slot highlight
 
 ```html
-<div>
-  <start-mini-button-group>
-    <start-mini-button icon="left" position="left">上一页</start-mini-button>
-    <start-mini-button icon="right" position="right">下一页</start-mini-button>
-  </start-mini-button-group>
+  <star-mini-button-group>
+    <star-mini-button icon="left" position="left">上一页</star-mini-button>
+    <star-mini-button icon="right" position="right">下一页</star-mini-button>
+  </star-mini-button-group>
 
-  <start-mini-button-group>
-    <start-mini-button icon="edit"></start-mini-button>
-    <start-mini-button icon="edit"></start-mini-button>
-    <start-mini-button icon="edit"></start-mini-button>
-  </start-mini-button-group>
-</div>
+  <star-mini-button-group>
+    <star-mini-button icon="edit"></star-mini-button>
+    <star-mini-button icon="edit"></star-mini-button>
+    <star-mini-button icon="edit"></star-mini-button>
+  </star-mini-button-group>
 ```
 
 :::

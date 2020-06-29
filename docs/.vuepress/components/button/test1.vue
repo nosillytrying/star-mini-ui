@@ -1,20 +1,20 @@
 <template>
   <div>
-      <start-mini-button>默认按钮</start-mini-button>
-      <start-mini-button type="primary">主要按钮</start-mini-button>
-      <start-mini-button type="success">成功按钮</start-mini-button>
-      <start-mini-button type="info">信息按钮</start-mini-button>
-      <start-mini-button type="warning">警告按钮</start-mini-button>
-      <start-mini-button type="danger">危险按钮</start-mini-button>
+      <star-mini-button>默认按钮</star-mini-button>
+      <star-mini-button type="primary">主要按钮</star-mini-button>
+      <star-mini-button type="success">成功按钮</star-mini-button>
+      <star-mini-button type="info">信息按钮</star-mini-button>
+      <star-mini-button type="warning">警告按钮</star-mini-button>
+      <star-mini-button type="danger">危险按钮</star-mini-button>
       
   </div>
 </template>
 
 <script>
-import startMiniButton from '../../../../src/packages/button/button.vue'
+import starMiniButton from '../../../../src/packages/button/button.vue'
 export default {
   components:{
-    startMiniButton
+    starMiniButton
   }
 }
 </script>

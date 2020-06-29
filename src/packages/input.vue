@@ -1,7 +1,20 @@
 <template>
   <div class='star-mini-input' :class='inputClass'>
-    <input :disabled='disabled' :type="type" :value='value' :placeholder="placeholder" :name='name' @input="$emit('input', $event.target.value)">
-    <star-mini-icon icon='qingkong' v-if='clearable' @click.native="$emit('input','')" />
+    <star-mini-icon v-if='prefixIcon' :icon='prefixIcon'></star-mini-icon>
+    <input 
+      ref='input'
+      :disabled='disabled' 
+      :type="showPassword ? (passWordVisble ? 'text': 'password') : type"
+      :value='value' 
+      :placeholder="placeholder" 
+      :name='name' 
+      @input="$emit('input', $event.target.value)"
+    >
+    <!--mousedown.native.prevent 不会失去焦点 -->
+    <star-mini-icon icon='qingkong' v-if='clearable && value' @click.native="$emit('input','')" @mousedown.native.prevent/>
+    <!--先失去焦点 在获取焦点-->
+    <star-mini-icon icon='eye' v-if='showPassword && value' @click.native="changeStatus" />
+    <star-mini-icon :icon='suffixIcon' v-if='suffixIcon' ></star-mini-icon>
   </div>
 </template>
 
@@ -36,15 +49,37 @@ export default {
     clearable: {
       type: Boolean,
       default: false
+    },
+    showPassword: {
+      type: Boolean,
+      default: false
+    },
+    prefixIcon:String,
+    suffixIcon: String
+  },
+  data () {
+    return {
+      passWordVisble: true
     }
   },
   computed: {
     inputClass() {
       let inputClass = [];
-      if (this.clearable) {
+      if (this.clearable || this.showPassword || this.suffixIcon) {
         inputClass.push(`star-mini-input-suffix-icon`);
       }
+      if (this.prefixIcon) {
+        inputClass.push(`star-mini-input-prefix-icon`)
+      }
       return inputClass;
+    }
+  },
+  methods: {
+    changeStatus () {
+      this.passWordVisble = !this.passWordVisble;
+      this.$nextTick(() => {
+        this.$refs.input.focus()
+      })
     }
   },
   components: {
@@ -84,8 +119,23 @@ export default {
     right: 8px;
     top: 50%;
     transform: translateY(-50%);
+    width:14px;
+    height: 14px;
     cursor: pointer;
-
+  }
+}
+.star-mini-input-prefix-icon{
+  input{
+    padding-left: 25px;
+  }
+  .star-mini-icon {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width:14px;
+    height: 14px;
+    cursor: pointer;
   }
 }
 </style>
