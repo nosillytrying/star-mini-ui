@@ -1,21 +1,21 @@
 <template>
-  <button class='start-mini-button' :class='hsButtonClass' :disabled='loading' @click='$emit("click",$event)'>
+  <button class='star-mini-button' :class='hsButtonClass' :disabled='loading' @click='$emit("click",$event)'>
     <!-- 1 可以通过 v-if判断
     2 可以通过css属性 order来判断 -->
-    <start-mini-icon :icon='icon' v-if='icon && !loading' class='icon'></start-mini-icon>
-    <start-mini-icon icon='loading' v-if='loading' class='icon'></start-mini-icon>
-    <!-- <start-mini-icon :icon='icon' v-if='icon && iconPosition ==="left"' class='icon'></start-mini-icon> -->
+    <star-mini-icon :icon='icon' v-if='icon && !loading' class='icon'></star-mini-icon>
+    <star-mini-icon icon='loading' v-if='loading' class='icon'></star-mini-icon>
+    <!-- <star-mini-icon :icon='icon' v-if='icon && iconPosition ==="left"' class='icon'></star-mini-icon> -->
     <span v-if='$slots.default'>
       <slot></slot>
     </span>
-    <!-- <start-mini-icon :icon='icon' v-if='icon && iconPosition ==="right"' class='icon'></start-mini-icon> -->
+    <!-- <star-mini-icon :icon='icon' v-if='icon && iconPosition ==="right"' class='icon'></star-mini-icon> -->
   </button>
 </template>
 
 <script>
 import startMiniIcon from '../icon'
 export default {
-  name: 'start-mini-button',
+  name: 'star-mini-button',
   components: {
     startMiniIcon
   },
@@ -66,10 +66,10 @@ export default {
     hsButtonClass() {
       let classList = [];
       if (this.type) {
-        classList.push(`start-mini-button-${this.type}`);
+        classList.push(`star-mini-button-${this.type}`);
       }
       if (this.iconPosition) {
-        classList.push(`start-mini-button-${this.iconPosition}`);
+        classList.push(`star-mini-button-${this.iconPosition}`);
       }
       return classList;
     }
@@ -85,7 +85,7 @@ $color: #606266;
 $border-color: #dcdfe6;
 $background: #ecf5ff;
 $active-color: #3a8ee6;
-.start-mini-button {
+.star-mini-button {
   border-radius: $border-radius;
   border: 1px solid $border-color;
   line-height: 1; // 文字和高度一样高

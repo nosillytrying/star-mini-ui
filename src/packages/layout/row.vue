@@ -1,12 +1,12 @@
 <template>
-  <div class='start-mini-row' :style='rowStyle'>
+  <div class='star-mini-row' :style='rowStyle'>
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'start-mini-row',
+  name: 'star-mini-row',
   props: {
       gutter: {
           type: Number,
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang='scss'>
-.start-mini-row {
+.star-mini-row {
   display: flex;
   flex-wrap: wrap;
 }

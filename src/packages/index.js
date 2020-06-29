@@ -3,7 +3,6 @@ const requireComponent = require.context('./', true, /\.vue$/);
 const importAll = (result) => {
     result.keys().forEach(fileName => {
         let component = requireComponent(fileName).default || requireComponent(fileName);
-        console.log(component, 'componentcomponentcomponent')
         _Vue.component(component.name,component)
     })  
 }

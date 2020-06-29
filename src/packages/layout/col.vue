@@ -1,12 +1,12 @@
 <template>
-  <div class='start-mini-col' :class='colClass' :style='colStyle'>
+  <div class='star-mini-col' :class='colClass' :style='colStyle'>
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'start-mini-col',
+  name: 'star-mini-col',
   props: {
     span: {
       type: Number,
@@ -30,9 +30,9 @@ export default {
   computed: {
     colClass () {
       let colClass = [];
-      colClass.push(`start-mini-col-${this.span}`);
+      colClass.push(`star-mini-col-${this.span}`);
       if (this.offset) {
-          colClass.push(`start-mini-col-offset-${this.offset}`)
+          colClass.push(`star-mini-col-offset-${this.offset}`)
       }
       ['xs', 'sm', 'md', 'lg', 'xl'].forEach(type => {
           if (typeof this[type] === Object) {
@@ -40,10 +40,10 @@ export default {
                   span,
                   offset
               } = this[type]
-              span && colClass.push(`start-mini-col-${type}-${span}`);
-              offset && colClass.push(`start-mini-col-${type}-offset-${offset}`);
+              span && colClass.push(`star-mini-col-${type}-${span}`);
+              offset && colClass.push(`star-mini-col-${type}-offset-${offset}`);
           } else {
-            this[type] && colClass.push(`start-mini-col-${type}-${this[type]}`);
+            this[type] && colClass.push(`star-mini-col-${type}-${this[type]}`);
           }
       })
       return colClass;
@@ -66,59 +66,59 @@ export default {
 <style lang='scss'>
 @import '../../styles/_base';
 @for $i from 0 through 24 {
-  .start-mini-col-#{$i} {
+  .star-mini-col-#{$i} {
       width: $i / 24 * 100%;
   }
-  .start-mini-col-offset-#{$i} {
+  .star-mini-col-offset-#{$i} {
       margin-left: $i / 24 * 100%;
   }
 }
 @include response (xs) {
     @for $i from 1 through 24 {
-        .start-mini-col-xs-#{$i}{
+        .star-mini-col-xs-#{$i}{
             width: $i / 24 * 100%;
         }
-        .start-mini-col-xs-offset-#{$i}{
+        .star-mini-col-xs-offset-#{$i}{
             width: $i / 24 * 100%;
         }
     }
 }
 @include response (sm) {
     @for $i from 1 through 24 {
-        .start-mini-col-sm-#{$i}{
+        .star-mini-col-sm-#{$i}{
             width: $i / 24 * 100%;
         }
-        .start-mini-col-sm-offset-#{$i}{
+        .star-mini-col-sm-offset-#{$i}{
             width: $i / 24 * 100%;
         }
     }
 }
 @include response (md) {
     @for $i from 1 through 24 {
-        .start-mini-col-md-#{$i}{
+        .star-mini-col-md-#{$i}{
             width: $i / 24 * 100%;
         }
-        .start-mini-col-md-offset-#{$i}{
+        .star-mini-col-md-offset-#{$i}{
             width: $i / 24 * 100%;
         }
     }
 }
 @include response (lg) {
     @for $i from 1 through 24 {
-        .start-mini-col-lg-#{$i}{
+        .star-mini-col-lg-#{$i}{
             width: $i / 24 * 100%;
         }
-        .start-mini-col-lg-offset-#{$i}{
+        .star-mini-col-lg-offset-#{$i}{
             width: $i / 24 * 100%;
         }
     }
 }
 @include response (xl) {
     @for $i from 1 through 24 {
-        .start-mini-col-xl-#{$i}{
+        .star-mini-col-xl-#{$i}{
             width: $i / 24 * 100%;
         }
-        .start-mini-col-xl-offset-#{$i}{
+        .star-mini-col-xl-offset-#{$i}{
             width: $i / 24 * 100%;
         }
     }

@@ -1,21 +1,21 @@
 <template>
-  <div class='start-mini-button-group'>
+  <div class='star-mini-button-group'>
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'start-mini-button-group',
+  name: 'star-mini-button-group',
   mounted() {
-    // start-mini-button-group 里面只能放start-mini-button 需要在mounted里面进行校验
+    // star-mini-button-group 里面只能放star-mini-button 需要在mounted里面进行校验
     let children = this.$el.children;
     for (let i = 0; i < children.length; i++) {
       console.assert(
         children[i].tagName === 'BUTTON' &&
           children[i].__vue__ &&
-          children[i].__vue__.$options._componentTag === 'start-mini-button',
-        '子元素必须是start-mini-button'
+          children[i].__vue__.$options._componentTag === 'star-mini-button',
+        '子元素必须是star-mini-button'
       );
     }
   }
@@ -24,7 +24,7 @@ export default {
 
 <style lang='scss'>
 @import '../../styles/_base.scss';
-.start-mini-button-group {
+.star-mini-button-group {
   display: inline-flex;
   vertical-align: middle;
   padding: 24px;
