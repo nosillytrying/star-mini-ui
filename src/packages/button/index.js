@@ -1,5 +1,5 @@
-import Button from './button.vue'
-Button.install = function (Vue) {
-    Vue.component(Button.name, Button.default || Button)
+import starMiniButton from './button.vue'
+starMiniButton.install = function (Vue) {
+    Vue.component(starMiniButton.name, starMiniButton.default || starMiniButton)
 }
-export default Button;
+export default starMiniButton;

@@ -1,5 +1,5 @@
-import Aside from './aside.vue'
-Aside.install = function (Vue) {
-    Vue.component(Aside.name, Aside.default || Aside)
+import starMiniAside from './aside.vue'
+starMiniAside.install = function (Vue) {
+    Vue.component(starMiniAside.name, starMiniAside.default || starMiniAside)
 }
-export default Aside;
+export default starMiniAside;

@@ -1,5 +1,5 @@
-import Pagination from './pagination.vue'
-Pagination.install = function (Vue) {
-    Vue.component(Pagination.name, Pagination.default || Pagination)
+import starMiniPagination from './pagination.vue'
+starMiniPagination.install = function (Vue) {
+    Vue.component(starMiniPagination.name, starMiniPagination.default || starMiniPagination)
 }
-export default Pagination;
+export default starMiniPagination;

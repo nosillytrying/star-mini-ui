@@ -1,6 +1,6 @@
-import Icon from './icon.vue'
-Icon.install = function (Vue) {
-    Vue.component(Icon.name, Icon.default || Icon)
+import starMiniIcon from './icon.vue'
+starMiniIcon.install = function (Vue) {
+    Vue.component(starMiniIcon.name, starMiniIcon.default || starMiniIcon)
 }
 
-export default Icon;
+export default starMiniIcon;

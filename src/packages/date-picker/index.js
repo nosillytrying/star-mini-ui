@@ -1,5 +1,5 @@
-import DatePicker from './date-picker.vue'
-DatePicker.install = function (Vue) {
-    Vue.component(DatePicker.name, DatePicker.default || DatePicker)
+import starMiniDatePicker from './date-picker.vue'
+starMiniDatePicker.install = function (Vue) {
+    Vue.component(starMiniDatePicker.name, starMiniDatePicker.default || starMiniDatePicker)
 }
-export default DatePicker;
+export default starMiniDatePicker;

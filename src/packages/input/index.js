@@ -1,6 +1,6 @@
-import Input from './input.vue'
-Input.install = function (Vue) {
-    Vue.component(Input.name, Input.default || Input)
+import starMiniInput from './input.vue'
+starMiniInput.install = function (Vue) {
+    Vue.component(starMiniInput.name, starMiniInput.default || starMiniInput)
 }
 
-export default Input;
+export default starMiniInput;

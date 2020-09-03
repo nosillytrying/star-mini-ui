@@ -1,5 +1,5 @@
-import Main from './main.vue'
-Main.install = function (Vue) {
-    Vue.component(Main.name, Main.default || Main)
+import starMiniMain from './main.vue'
+starMiniMain.install = function (Vue) {
+    Vue.component(starMiniMain.name, starMiniMain.default || starMiniMain)
 }
-export default Main;
+export default starMiniMain;

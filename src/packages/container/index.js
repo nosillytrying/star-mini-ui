@@ -1,6 +1,6 @@
-import Container from './container.vue'
-Container.install = function (Vue) {
-    Vue.component(Container.name, Container.default || Container)
+import starMiniContainer from './container.vue'
+starMiniContainer.install = function (Vue) {
+    Vue.component(starMiniContainer.name, starMiniContainer.default || starMiniContainer)
 }
 
-export default Container;
+export default starMiniContainer;

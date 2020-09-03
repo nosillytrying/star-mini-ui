@@ -1,6 +1,6 @@
-import Upload from './upload.vue'
-Upload.install = function (Vue) {
-    Vue.component(Upload.name, Upload.default || Upload)
+import starMiniUpload from './upload.vue'
+starMiniUpload.install = function (Vue) {
+    Vue.component(starMiniUpload.name, starMiniUpload.default || starMiniUpload)
 }
 
-export default Upload;
+export default starMiniUpload;

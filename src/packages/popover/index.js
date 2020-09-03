@@ -1,5 +1,5 @@
-import Popover from './popover.vue'
-Popover.install = function (Vue) {
-    Vue.component(Popover.name, Popover.default || Popover)
+import starMiniPopover from './popover.vue'
+starMiniPopover.install = function (Vue) {
+    Vue.component(starMiniPopover.name, starMiniPopover.default || starMiniPopover)
 }
-export default Popover;
+export default starMiniPopover;

@@ -1,6 +1,6 @@
-import Header from './header.vue'
-Header.install = function (Vue) {
-    Vue.component(Header.name, Header.default || Header)
+import starMiniHeader from './header.vue'
+starMiniHeader.install = function (Vue) {
+    Vue.component(starMiniHeader.name, starMiniHeader.default || starMiniHeader)
 }
 
-export default Header;
+export default starMiniHeader;

@@ -1,6 +1,6 @@
-import Table from './table.vue'
-Table.install = function (Vue) {
-    Vue.component(Table.name, Table.default || Table)
+import starMiniTable from './table.vue'
+starMiniTable.install = function (Vue) {
+    Vue.component(starMiniTable.name, starMiniTable.default || starMiniTable)
 }
 
-export default Table;
+export default starMiniTable;

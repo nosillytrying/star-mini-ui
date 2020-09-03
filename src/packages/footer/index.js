@@ -1,5 +1,5 @@
-import Footer from './footer.vue'
-Footer.install = function (Vue) {
-    Vue.component(Footer.name, Footer.default || Footer)
+import starMiniFooter from './footer.vue'
+starMiniFooter.install = function (Vue) {
+    Vue.component(starMiniFooter.name, starMiniFooter.default || starMiniFooter)
 }
-export default Footer;
+export default starMiniFooter;

@@ -1,5 +1,5 @@
-import Row from './row.vue'
-Row.install = function (Vue) {
-    Vue.component(Row.name, Row.default || Row)
+import starMiniRow from './row.vue'
+starMiniRow.install = function (Vue) {
+    Vue.component(starMiniRow.name, starMiniRow.default || starMiniRow)
 }
-export default Row;
+export default starMiniRow;

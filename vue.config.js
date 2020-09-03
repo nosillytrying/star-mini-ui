@@ -25,7 +25,7 @@ if(process.env.NODE_ENV === 'production' && args.includes('--all')){
                 filename:'lib/[name]/index.js',
                 libraryTarget:'umd',
                 libraryExport:'default',
-                library:['StarMiniUi','[name]'] // window.zf.
+                library:['StarMiniUi','[name]'] // window.StarMiniUi.[name]
             }, 
             // 排除vue
             externals:{

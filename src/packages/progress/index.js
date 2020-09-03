@@ -1,5 +1,5 @@
-import Progress from './progress.vue'
-Progress.install = function (Vue) {
-    Vue.component(Progress.name, Progress.default || Progress)
+import starMiniProgress from './progress.vue'
+starMiniProgress.install = function (Vue) {
+    Vue.component(starMiniProgress.name, starMiniProgress.default || starMiniProgress)
 }
-export default Progress;
+export default starMiniProgress;

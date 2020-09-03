@@ -1,5 +1,5 @@
-import Col from './col.vue'
-Col.install = function (Vue) {
-    Vue.component(Col.name, Col.default || Col)
+import starMiniCol from './col.vue'
+starMiniCol.install = function (Vue) {
+    Vue.component(starMiniCol.name, starMiniCol.default || starMiniCol)
 }
-export default Col;
+export default starMiniCol;

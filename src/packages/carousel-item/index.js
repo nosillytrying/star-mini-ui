@@ -1,5 +1,5 @@
-import CarouselItem from './carousel-item.vue'
-CarouselItem.install = function (Vue) {
-    Vue.component(CarouselItem.name, CarouselItem.default || CarouselItem)
+import starMiniCarouselItem from './carousel-item.vue'
+starMiniCarouselItem.install = function (Vue) {
+    Vue.component(starMiniCarouselItem.name, starMiniCarouselItem.default || starMiniCarouselItem)
 }
-export default CarouselItem;
+export default starMiniCarouselItem;

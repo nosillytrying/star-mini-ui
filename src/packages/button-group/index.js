@@ -1,5 +1,5 @@
-import ButtonGroup from './button-group.vue'
-ButtonGroup.install = function (Vue) {
-    Vue.component(ButtonGroup.name, ButtonGroup.default || ButtonGroup)
+import starMiniButtonGroup from './button-group.vue'
+starMiniButtonGroup.install = function (Vue) {
+    Vue.component(starMiniButtonGroup.name, starMiniButtonGroup.default || starMiniButtonGroup)
 }
-export default ButtonGroup;
+export default starMiniButtonGroup;
