@@ -26,7 +26,7 @@
 
 <script>
 import ajax from './ajax';
-import starMiniProgress from '../progress/progress.vue';
+import starMiniProgress from '../star-mini-progress/progress.vue';
 import uploadDragger from './upload-dragger.vue';
 export default {
   name: 'star-mini-upload',

@@ -12,8 +12,8 @@
   </div>
 </template>
 <script>
-import starMiniButton from '../../../../src/packages/button/button.vue';
-import starMiniButtonGroup from '../../../../src/packages/button-group/button-group.vue'
+import starMiniButton from '../../../../src/packages/star-mini-button/button.vue'
+import starMiniButtonGroup from '../../../../src/packages/star-mini-button-group/button-group.vue'
 export default {
   components: {
     starMiniButton,

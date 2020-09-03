@@ -48,8 +48,12 @@
 
 <script>
 import cloneDeep from "lodash/cloneDeep";
+import starMiniIcon from '../star-mini-icon/icon.vue'
 export default {
   name: "star-mini-table",
+  components: {
+    starMiniIcon
+  },
   watch: {
     selectedItems() {
       // 我要设置半选状态
@@ -114,7 +118,6 @@ export default {
     }
   },
   // 单向数据流
-  name: "star-mini-table",
   created() {
     this.cloneData = this.cloneData.map(row => {
       row._id = Math.random();

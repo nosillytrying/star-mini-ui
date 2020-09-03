@@ -57,8 +57,10 @@
     </div>
   </div>
 </template>
-
 <script>
+import starMiniButton from '../star-mini-button/button.vue'
+import starMiniIcon from '../star-mini-icon/icon.vue'
+import starMiniInput from '../star-mini-input/input.vue'
 // 这个可以判断点击的是否是自己内部元素
 function getYearMonthDay(date) {
   let year = date.getFullYear();
@@ -78,6 +80,10 @@ export default {
       type: [String, Date],
       default: () => new Date()
     }
+  },
+  components: {
+    starMiniButton,
+    starMiniIcon
   },
   watch: {
     value(newValue) {

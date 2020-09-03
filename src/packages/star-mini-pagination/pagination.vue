@@ -25,10 +25,14 @@
 </template>
 
 <script>
+import starMiniIcon from '../star-mini-icon/icon.vue'
 export default {
   name: "star-mini-pagination",
   data() {
     return { showPrevMore: false, showNextMore: false };
+  },
+  components: {
+    starMiniIcon
   },
   methods:{
       select(current){

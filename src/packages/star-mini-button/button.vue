@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import starMiniIcon from '../icon/icon.vue'
+import starMiniIcon from '../star-mini-icon/icon.vue'
 export default {
   name: 'star-mini-button',
   components: {

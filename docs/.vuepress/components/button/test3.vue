@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import starMiniButton from '../../../../src/packages/button/button.vue';
+import starMiniButton from '../../../../src/packages/star-mini-button/button.vue'
 export default {
   components: {
     starMiniButton

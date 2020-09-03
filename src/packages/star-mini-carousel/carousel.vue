@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import starMiniButton from '../star-mini-button/button.vue'
 export default {
   name: "star-mini-carousel", // 轮播图组件
   props: {
@@ -50,6 +51,9 @@ export default {
       type: Boolean,
       default: true
     }
+  },
+  components: {
+    starMiniButton
   },
   data() {
     // currentSelected 这个值是可以被更改的
