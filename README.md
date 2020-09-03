@@ -13,6 +13,13 @@ import 'star-mini-ui/dist/star-mini-ui.css'
 Vue.use(starMiniUi)
 
 ```
+## demand loading
+```
+import {button} from 'star-mini-ui'
+import 'star-mini-ui/dist/star-mini-ui.css'
 
+Vue.use(starMiniUi)
+
+```
 ## 文档地址
 https://nosillytrying.github.io/star-mini-ui/

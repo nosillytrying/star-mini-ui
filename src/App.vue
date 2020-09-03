@@ -1,36 +1,39 @@
 <template>
   <div>
-    <!-- 
-        ajax + formdata 
-        action 提交到后台的路径
-        limit 限制提交个数
-        multiple 多文件上传
-        file-list 显示已经上传过的图片
-        on-exceed 用来 如果超出限制后 执行此方法
-        on-change 如果当前上传文件的状态发生变化的时候 会触发 如果用户选择了文件 上传成功 或者失败
-        on-sucess 在上传成功时会触发
-        on-error   在失败时触发
-        on-progress 上传时多次触发
-    -->
-    <star-mini-upload
-      name='avatar'
-      action='http://localhost:3000/upload'
-      :limit='3'
-      multiple
-      accept='image/jpg'
-      :file-list='fileList'
-      :on-exceed='handleExceed'
-      :on-change='handleChange'
-      :on-success='handleSuccess'
-      :on-error='handleError'
-      :on-progress='handleProgress'
-      :before-upload ='handleBeforeUpload'
+    <!-- <ul class='infinite-scroll' 
+        v-infinite-scroll='load'
+        infinite-scroll-disabled='disabled'
+        infinite-scroll-delay='delay'
+        infinite-scroll-distance='distance'
+        infinite-scroll-immediate='immediate'
+      >
+        <li v-for='c in count' :key='c'>{{c}}</li>
+      </ul> -->
+    <!-- <star-mini-popover v-model='value' width='200px' title='标题' content='内容内容 这是一个popover' trigger='click' placement='right'>
+      <star-mini-button slot='reference' type='primary'>
+        点我弹框
+      </star-mini-button>
+    </star-mini-popover> -->
+    <!-- <star-mini-carousel
+      height='200px'
+      :autoplay='true'
+      :delay='3000'
+      :initial-index='0'
+      :loop='true'
+      @change='change'
     >
-     <star-mini-button type='primary' icon='shangchuan'>
-       点击上传
-     </star-mini-button>
-     <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-    </star-mini-upload>
+      <star-mini-carousel-item>
+        <div>内容1</div>
+      </star-mini-carousel-item>
+      <star-mini-carousel-item>
+        <div>内容2</div>
+      </star-mini-carousel-item>
+      <star-mini-carousel-item>
+        <dir>内容3</dir>
+      </star-mini-carousel-item>
+    </star-mini-carousel> -->
+    <star-mini-table :columns="columns1" :data="data1"></star-mini-table>
+    <star-mini-pagination :total='10' :pager-count='5' :current-page.sync='currentPage'></star-mini-pagination>
   </div>
 </template>
 
@@ -38,45 +41,67 @@
 export default {
   data() {
     return {
-      value: '',
-      fileList: [
+      value: true,
+      count: 0,
+      disabled: false,
+      delay: 200,
+      distance: 30,
+      immediate: true,
+      currentPage: 5,
+      columns1: [
         {
-          url: 'xxx',
-          name: 'aaa'
+          title: '姓名',
+          key: 'name'
+        },
+        {
+          title: '年龄',
+          key: 'age'
+        },
+        {
+          title: '地址',
+          key: 'address'
+        }
+      ],
+      data1: [
+        {
+          name: '王小明',
+          age: 18,
+          address: '北京市朝阳区芍药居'
+        },
+        {
+          name: '张小刚',
+          age: 25,
+          address: '北京市海淀区西二旗'
+        },
+        {
+          name: '李小红',
+          age: 30,
+          address: '上海市浦东新区世纪大道'
+        },
+        {
+          name: '周小伟',
+          age: 26,
+          address: '深圳市南山区深南大道'
         }
       ]
     };
   },
-  methods:{
-    handleBeforeUpload ({size, name}) {
-      console.log(typeof name, 'name')
-      let limit = size / 1024 > 500;
-      if (limit) {
-        console.log('当前超过上传的超过了500k')
-      } else if (!name.endsWith('.jpeg')) {
-          console.log('文件类型不对')
-          return false
-      }
-      return true
+  methods: {
+    change(e) {
+      console.log(e, 'eeeeee');
     },
-    handleExceed () {
-      console.log('用户传递的数量已经超过预期数量了')
-    },
-    handleChange (file) {
-      console.log(file, '用户更新了文件')
-    },
-    handleSuccess () {
-
-    },
-    handleError () {
-
-    },
-    handleProgress () {
-
+    load() {
+      this.count += 2;
     }
   }
 };
 </script>
 
-<style>
+<style lang='scss'>
+.infinite-scroll {
+  overflow-y: scroll;
+  width: 400px;
+  height: 300px;
+  border: 1px solid green;
+}
 </style>

@@ -9,6 +9,9 @@
       :placeholder="placeholder" 
       :name='name' 
       @input="$emit('input', $event.target.value)"
+      @focus="$emit('focus',$event.target.value)"
+      @blur="$emit('blur',$event.target.value)"
+      @change="$emit('change',$event)"
     >
     <!--mousedown.native.prevent 不会失去焦点 -->
     <star-mini-icon icon='qingkong' v-if='clearable && value' @click.native="$emit('input','')" @mousedown.native.prevent/>
@@ -19,7 +22,7 @@
 </template>
 
 <script>
-import starMiniIcon from './icon.vue';
+import starMiniIcon from '../icon/icon.vue';
 export default {
   name: 'star-mini-input',
   props: {
@@ -89,7 +92,7 @@ export default {
 </script>
 
 <style lang='scss'>
-@import '../styles/_base.scss';
+@import '../../styles/_base.scss';
 .star-mini-input {
   position: relative;
   display: inline-flex;
