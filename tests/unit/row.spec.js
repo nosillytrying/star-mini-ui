@@ -5,18 +5,18 @@ import {
     expect
 } from 'chai'
 
-import Row from '@/packages/layout/row.vue';
-import Col from '@/packages/layout/col.vue';
+import starMiniRow from '@/packages/star-mini-row';
+import starMiniCol from '@/packages/star-mini-col';
 
 describe('row.vue', () => {
     it('1.测试gutter是否ok?', async () => {
-        let wrapper = shallowMount(Row, {
+        let wrapper = shallowMount(starMiniRow, {
             attachToDocument: true,
             stubs: {
-                'start-mini-col': Col
+                'star-mini-col': starMiniCol
             },
             slots: {
-              default: '<start-mini-col></start-mini-col>'
+              default: '<star-mini-col></star-mini-col>'
             },
             propsData: {
                 gutter: 20
@@ -26,18 +26,18 @@ describe('row.vue', () => {
         expect(getComputedStyle(row).marginLeft).to.eq('-10px');
         expect(getComputedStyle(row).marginRight).to.eq('-10px');
         await wrapper.vm.$nextTick();
-        let col = row.querySelector('.start-mini-col');
+        let col = row.querySelector('.star-mini-col');
         expect(getComputedStyle(col).paddingLeft).to.eq('10px');
         expect(getComputedStyle(col).paddingLeft).to.eq('10px');
     })
-    it('1.测试justify属性?', async () => {
-        let wrapper = shallowMount(Row, {
+    it('2.测试justify属性?', async () => {
+        let wrapper = shallowMount(starMiniRow, {
             attachToDocument: true,
             stubs: {
-                'start-mini-col': Col
+                'star-mini-col': starMiniCol
             },
             slots: {
-              default: `start-mini-col`
+              default: `star-mini-col`
             },
             propsData: {
                 justify: 'flex-start'

@@ -19,7 +19,7 @@
 ## 二.通过`Vue-Cli`初始化项目
 
 ```bash
-vue create zh-ui
+vue create star-mini-ui
 ```
 
 ```bash
@@ -81,12 +81,12 @@ vue create zh-ui
 ## 四.编写插件入口
 
 ```javascript
-import Button from './button.vue';
-import Icon from './icon.vue';
+import starMiniButton from './star-mini-ui.vue';
+import starMiniIcon from './star-mini-icon.vue';
 
 const install = (Vue) =>{ // 对外暴露install方法
-    Vue.component(Button.name,Button);
-    Vue.component(Icon.name,Icon);
+    Vue.component(starMiniButton.name,starMiniButton);
+    Vue.component(starMiniIcon.name,starMiniIcon);
 }
 
 if(typeof window.Vue !== 'undefined'){
@@ -98,8 +98,8 @@ export default {
 ```
 
 ```js
-import zhuUi from  './packages';
-Vue.use(zhuUi)
+import StarMiniUi from  './packages';
+Vue.use(StarMiniUi))
 ```
 
 > 我们可以通过插件的方式去引入我们的组件库
@@ -176,12 +176,12 @@ export default {
     btnClass() { // 动态添加按钮样式
       let classes = [];
       if (this.type) {
-        classes.push(`zh-button-${this.type}`);
+        classes.push(`star-mini-button-${this.type}`);
       }
       return classes;
     }
   },
-  name: "zh-button"
+  name: "star-mini-button"
 };
 </script>
 <style lang="scss">
@@ -192,7 +192,7 @@ $color: #606266;
 $border-color: #dcdfe6;
 $background: #ecf5ff;
 $active-color: #3a8ee6;
-.zh-button {
+.star-mini-button {
   border-radius: $border-radius;
   border: 1px solid $border-color;
   color: $color;
@@ -250,7 +250,7 @@ $active-color: #3a8ee6;
 
 ```vue
 <template>
-  <svg class="zh-icon" aria-hidden="true">
+  <svg class="star-mini-icon" aria-hidden="true">
     <use :xlink:href="`#icon-${icon}`" />
   </svg>
 </template>
@@ -260,11 +260,11 @@ export default {
   props: {
     icon: String
   },
-  name: "zh-icon"
+  name: "star-mini-icon"
 };
 </script>
 <style lang="scss">
-.zh-icon {
+.star-mini-icon {
   width: 24px;
   height: 24px;
   vertical-align: middle;
@@ -273,7 +273,7 @@ export default {
 ```
 
 ```vue
-<button class="zh-button" :class="btnClass">
+<button class="star-mini-button" :class="btnClass">
     <zh-icon 
         :icon="icon"
         v-if="icon"
@@ -304,8 +304,8 @@ span + .icon {
 ```vue
 <template>
   <button class="zh-button" :class="btnClass" :disabled="loading">
-    <zh-icon :icon="icon" v-if="icon && !loading" class="icon"></zh-icon>
-    <zh-icon icon="loading" v-if="loading" class="icon loading"></zh-icon>
+    <star-mini-icon :icon="icon" v-if="icon && !loading" class="icon"></-icon>
+    <star-mini-icon icon="loading" v-if="loading" class="icon loading"></-icon>
     <span v-if="this.$slots.default">
       <slot></slot>
     </span>
@@ -339,7 +339,7 @@ span + .icon {
 
 <script>
 export default {
-    name:'zh-button-group',
+    name:'star-mini-button-group',
     mounted () {
     let children = this.$el.children
     for (let i = 0; i < children.length; i++) {
@@ -350,7 +350,7 @@ export default {
 </script>
 <style lang="scss">
 @import "../styles/_var.scss";
-.zh-button-group {
+.star-mini-button-group {
   display: inline-flex;
   vertical-align: middle;
   button {
@@ -455,7 +455,7 @@ describe('button.vue', () => {
     it('3.测试传入loading,是否能，控制loading属性', () => {
         const wrapper = shallowMount(Button, {
             stubs: {
-                'zh-icon': Icon
+                'star-mini-icon': Icon
             },
             propsData: {
                 loading: true // 传入的是edit 测试一下 edit是否ok
@@ -558,7 +558,7 @@ features:
 
 ```js
 module.exports = {
-    title: 'zhu-ui', // 设置网站标题
+    title: 'star-mini-ui', // 设置网站标题
     description: 'ui 库', //描述
     dest: './build', // 设置输出目录
     port: 1234, //端口
@@ -589,25 +589,23 @@ module.exports = {
 - 安装包
 
   ```bash
-  npm install element-ui highlight.js node-sass sass-loader --save
+  npm instal highlight.js node-sass sass-loader --save
   ```
 
 - link组件库
 
   ```bash
-  npm link zhu-ui
+  npm link star-mini-ui
   ```
 
 ```js
 import Vue from 'vue';
-import Element from 'element-ui'; // 引入elementUi
-import 'element-ui/lib/theme-chalk/index.css'
 
 import hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css' //样式文件
 
-import zhuUi from 'zhu-ui' // 要编写对应的文档的包
-import 'zhu-ui/dist/zhu-ui.css'
+import zhuUi from 'star-mini-ui' // 要编写对应的文档的包
+import 'star-mini-ui/dist/star-mini-ui.css'
 Vue.directive('highlight',function (el) {
   let blocks = el.querySelectorAll('pre code');
   blocks.forEach((block)=>{
