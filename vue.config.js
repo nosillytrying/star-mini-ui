@@ -43,8 +43,8 @@ if(process.env.NODE_ENV === 'production' && args.includes('--all')){
                 filename:'css/[name]/style.css'
             }
         },
-        // import {Button} from 'zf-ui';
-        // import {Button} from 'zf-ui/lib/button';
+        // import {star-mini-button} from 'star-mini-ui';
+        // import {Button} from 'star-mini-ui/lib/star-mini-button';
         // 用户配合babel-import-plugin就可以实现按需导入
         chainWebpack: config => {
             // 删除默认的配置
