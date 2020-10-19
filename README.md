@@ -15,10 +15,15 @@ Vue.use(starMiniUi)
 ```
 ## demand loading
 ```
-import {button} from 'star-mini-ui'
-import 'star-mini-ui/dist/star-mini-ui.css'
+import  { starMiniButton } from 'star-mini-ui'
+import "star-mini-ui/dist/css/star-mini-button/style.css"
+Vue.use(starMiniButton)
 
-Vue.use(starMiniUi)
+plugins: [["import", {
+    "libraryName": "star-mini-ui",
+    "libraryDirectory": "dist/lib",
+    "css": true
+}]]
 
 ```
 ## 文档地址
